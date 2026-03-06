@@ -1,0 +1,21 @@
+# 股票分析项目依赖包
+# 基于 udiedrichsen/stock-analysis v6.2.0
+
+# 核心数据获取
+yfinance>=0.2.40
+pandas>=2.0.0
+
+# 市场情绪分析
+fear-and-greed>=0.4
+
+# 可选依赖（未来扩展）
+# edgartools>=2.0.0      # SEC EDGAR数据
+# feedparser>=6.0.0      # RSS新闻订阅
+# requests>=2.31.0       # HTTP请求
+# beautifulsoup4>=4.12.0 # HTML解析
+# lxml>=4.9.0           # XML解析
+
+# 开发工具
+# pytest>=7.4.0         # 测试框架
+# black>=23.0.0         # 代码格式化
+# mypy>=1.5.0           # 类型检查

@@ -1,0 +1,64 @@
+{
+  "user_settings": {
+    "name": "股票交易监控系统",
+    "user_id": "openclaw-control-ui",
+    "created": "2026-03-06T12:43:00+08:00"
+  },
+  "monitoring_stocks": [
+    {
+      "symbol": "601857.SS",
+      "name": "中国石油",
+      "user_position": {
+        "shares": 800,
+        "cost_price": 12.465,
+        "current_price": 12.16,
+        "status": "持有中"
+      },
+      "strategy_settings": {
+        "stop_loss_percent": 7,
+        "stop_loss_price": 11.592,
+        "first_target_percent": 15,
+        "first_target_price": 14.335,
+        "second_target_percent": 20,
+        "second_target_price": 14.958
+      },
+      "monitoring_frequency": "每30分钟",
+      "alert_channels": ["openclaw_feishu"]
+    }
+  ],
+  "alert_rules": {
+    "buy_signals": [
+      "趋势符合：均线多头排列",
+      "量价符合：上涨放量，回调缩量",
+      "基本面符合：净利润为正，无重大负面事件",
+      "所有条件同时满足"
+    ],
+    "sell_signals": [
+      "触发止损：下跌7%",
+      "技术破位：跌破20日均线",
+      "达到目标：盈利15%或20%",
+      "风险预警：放量长阴线"
+    ],
+    "hold_signals": [
+      "趋势维持：股价在关键均线上方",
+      "量价健康：阳量大于阴量",
+      "未触发任何卖出信号"
+    ]
+  },
+  "notification_settings": {
+    "immediate_alerts": ["止损触发", "目标达到", "重大风险"],
+    "daily_summary": "收盘后30分钟内",
+    "weekly_review": "每周五收盘后"
+  },
+  "monitoring_schedule": {
+    "market_hours": {
+      "start": "09:30",
+      "end": "15:00",
+      "timezone": "Asia/Shanghai"
+    },
+    "check_intervals": [
+      "09:45", "10:15", "10:45", "11:15", "13:15", "13:45", "14:15", "14:45"
+    ],
+    "daily_review": "15:30"
+  }
+}

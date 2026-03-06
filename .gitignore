@@ -1,0 +1,56 @@
+# OpenClaw 工作空间忽略文件
+
+# 临时文件和缓存
+*.tmp
+*.temp
+*.log
+*.cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE 文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 大文件和数据
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.dat
+*.db
+*.sqlite
+*.sqlite3
+
+# 屏幕录制和截图（可以单独管理）
+screen_recordings/
+canvas_screenshots/
+
+# 日志文件（可以单独管理）
+logs/
+
+# 敏感信息
+*.key
+*.pem
+*.crt
+config.json
+secrets.json
+credentials.json
+
+# 特定目录（可选提交）
+# .openclaw/  # OpenClaw配置目录，通常不提交
+# memory/     # 内存文件，根据需求决定是否提交
